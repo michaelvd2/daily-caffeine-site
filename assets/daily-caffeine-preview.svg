@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Daily Caffeine macOS menu preview</title>
+  <desc id="desc">A dark macOS menu bar popover showing Daily Caffeine schedule status and duration controls.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1117"/>
+      <stop offset="0.55" stop-color="#16202a"/>
+      <stop offset="1" stop-color="#10161d"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#20262c"/>
+      <stop offset="1" stop-color="#11161b"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#000" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="760" rx="48" fill="url(#bg)"/>
+  <circle cx="1010" cy="120" r="170" fill="#1e6a5f" opacity="0.22"/>
+  <circle cx="210" cy="630" r="220" fill="#1d5c86" opacity="0.2"/>
+
+  <g transform="translate(118 74)" filter="url(#shadow)">
+    <rect width="964" height="612" rx="38" fill="url(#panel)" stroke="#3d464e" stroke-width="2"/>
+    <rect x="0" y="0" width="964" height="76" rx="38" fill="#242a30"/>
+    <circle cx="45" cy="38" r="13" fill="#ff6b5e"/>
+    <circle cx="82" cy="38" r="13" fill="#ffc84d"/>
+    <circle cx="119" cy="38" r="13" fill="#62d26f"/>
+
+    <text x="74" y="138" fill="#f5f7f8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="34" font-weight="750">Daily Caffeine</text>
+    <text x="74" y="182" fill="#9fb0bc" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="25" font-weight="520">On · schedule until 18:00 · 2h 12m left</text>
+
+    <line x1="74" y1="222" x2="890" y2="222" stroke="#3a444c" stroke-width="2"/>
+
+    <g font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="28" font-weight="620">
+      <text x="74" y="282" fill="#f3f5f5">Pause for</text>
+      <text x="74" y="340" fill="#f3f5f5">Keep awake for</text>
+      <text x="74" y="398" fill="#f3f5f5">Add for today</text>
+    </g>
+
+    <g transform="translate(540 250)">
+      <rect width="222" height="308" rx="24" fill="#11171c" stroke="#4b555e" stroke-width="2"/>
+      <g font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="25" font-weight="650" fill="#f2f4f5">
+        <text x="34" y="49">30m</text>
+        <text x="34" y="94">1h</text>
+        <text x="34" y="139">2h</text>
+        <text x="34" y="184">3h</text>
+        <text x="34" y="229">4h</text>
+      </g>
+      <line x1="30" y1="250" x2="192" y2="250" stroke="#47515a" stroke-width="2"/>
+      <rect x="30" y="266" width="94" height="30" rx="8" fill="#222a31" stroke="#515a62"/>
+      <text x="39" y="288" fill="#aeb8c0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="17" font-weight="560">minutes</text>
+      <text x="134" y="289" fill="#f2f4f5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="17" font-weight="720">Use</text>
+    </g>
+
+    <line x1="74" y1="435" x2="890" y2="435" stroke="#3a444c" stroke-width="2"/>
+    <text x="74" y="492" fill="#f3f5f5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="28" font-weight="680">Schedule</text>
+    <text x="74" y="537" fill="#9fb0bc" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="24" font-weight="520">Weekdays 09:00-18:00</text>
+
+    <g transform="translate(700 482)">
+      <rect width="160" height="56" rx="14" fill="#2c343b"/>
+      <text x="28" y="36" fill="#f6f8f8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="21" font-weight="650">Settings</text>
+    </g>
+  </g>
+</svg>

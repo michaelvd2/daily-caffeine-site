@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Daily Caffeine is a private macOS menu bar utility for schedule-based sleep prevention and temporary keep-awake overrides.">
+  <title>Daily Caffeine</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Daily Caffeine home">
+      <span class="brand-mark">DC</span>
+      <span>Daily Caffeine</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#features">Features</a>
+      <a href="#release">Release</a>
+      <a href="https://github.com/michaelvd2/daily-caffeine/releases/latest">Download</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Schedule-based keep-awake control for macOS.</h1>
+        <p>Daily Caffeine keeps a Mac awake during working hours, supports temporary pauses, and lets you add time to today's schedule without changing the recurring limit.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/michaelvd2/daily-caffeine/releases/latest">Private release</a>
+          <a class="button secondary" href="#features">View features</a>
+        </div>
+      </div>
+      <div class="preview-frame" aria-label="Daily Caffeine menu preview">
+        <img src="assets/daily-caffeine-preview.png" alt="Daily Caffeine menu showing active schedule status and duration controls">
+      </div>
+    </section>
+
+    <section id="features" class="feature-grid" aria-label="Daily Caffeine features">
+      <article>
+        <h2>Daily schedule</h2>
+        <p>Choose active days, start and end times, and an optional break window from the macOS settings panel.</p>
+      </article>
+      <article>
+        <h2>Add for today</h2>
+        <p>Add time to today's schedule end, useful when the recurring limit stays fixed but one day needs more time.</p>
+      </article>
+      <article>
+        <h2>Manual overrides</h2>
+        <p>Pause or keep awake for preset durations from 30 minutes through 8 hours, with remembered custom minutes inline.</p>
+      </article>
+    </section>
+
+    <section id="release" class="release">
+      <div>
+        <h2>Private macOS release</h2>
+        <p>The app is distributed as a zipped macOS app bundle from GitHub Releases. The repository and release are private; access requires GitHub permissions.</p>
+      </div>
+      <ul>
+        <li>SwiftPM macOS 14 app</li>
+        <li>Menu-bar-only workflow</li>
+        <li>Ad hoc signed development build</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
