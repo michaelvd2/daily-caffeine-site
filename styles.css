@@ -343,6 +343,52 @@ h1 {
   color: var(--ink);
 }
 
+.document-page {
+  max-width: 880px;
+  padding: 82px 0 96px;
+}
+
+.document-hero {
+  padding-bottom: 42px;
+  border-bottom: 1px solid var(--line);
+}
+
+.document-hero h1 {
+  max-width: none;
+  font-size: clamp(48px, 8vw, 92px);
+}
+
+.document-hero p:last-child {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.document-section {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 44px;
+  padding: 34px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.document-section h2 {
+  font-size: 23px;
+  line-height: 1.12;
+}
+
+.document-section p {
+  color: #2f3934;
+  font-size: 17px;
+}
+
+.document-section a {
+  color: var(--blue);
+  font-weight: 680;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @media (max-width: 960px) {
   .site-header {
     align-items: flex-start;
@@ -385,7 +431,8 @@ h1 {
   .status-strip,
   .split-section,
   .feature-list,
-  .release-panel {
+  .release-panel,
+  .document-section {
     grid-template-columns: 1fr;
   }
 
@@ -404,6 +451,14 @@ h1 {
   .release-panel {
     gap: 28px;
     padding: 64px 0;
+  }
+
+  .document-page {
+    padding: 56px 0 76px;
+  }
+
+  .document-section {
+    gap: 12px;
   }
 
   .feature-list article {
