@@ -3,64 +3,149 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Daily Caffeine is a private macOS menu bar utility for schedule-based sleep prevention and temporary keep-awake overrides.">
-  <title>Daily Caffeine</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Daily Caffeine is a minimal macOS menu bar app that keeps your Mac awake by schedule, manual overrides, or active coding work in selected workspaces.">
+  <meta name="theme-color" content="#f7f8f5">
+  <link rel="canonical" href="https://michaelvd2.github.io/daily-caffeine-site/">
+  <link rel="icon" type="image/png" href="assets/app-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Daily Caffeine">
+  <meta property="og:description" content="Schedule-based keep-awake control for macOS, with silent Workspace Activity extension for active coding sessions.">
+  <meta property="og:url" content="https://michaelvd2.github.io/daily-caffeine-site/">
+  <meta property="og:image" content="https://michaelvd2.github.io/daily-caffeine-site/assets/daily-caffeine-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Daily Caffeine">
+  <meta name="twitter:description" content="A tiny macOS menu bar app for schedules, pauses, and active workspace keep-awake sessions.">
+  <meta name="twitter:image" content="https://michaelvd2.github.io/daily-caffeine-site/assets/daily-caffeine-preview.png">
+  <title>Daily Caffeine - macOS keep-awake menu bar app</title>
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Daily Caffeine",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "macOS 14 or later",
+    "description": "Daily Caffeine is a minimal macOS menu bar app that keeps a Mac awake by schedule, manual override, or recent workspace activity from selected coding apps.",
+    "softwareVersion": "0.1.0",
+    "url": "https://michaelvd2.github.io/daily-caffeine-site/",
+    "downloadUrl": "https://github.com/michaelvd2/daily-caffeine/releases/latest",
+    "image": "https://michaelvd2.github.io/daily-caffeine-site/assets/daily-caffeine-preview.png",
+    "author": {
+      "@type": "Person",
+      "name": "Michael van Dijk"
+    }
+  }
+  </script>
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" aria-label="Daily Caffeine">
     <a class="brand" href="#top" aria-label="Daily Caffeine home">
-      <span class="brand-mark">DC</span>
+      <img src="assets/app-icon.png" alt="" width="40" height="40">
       <span>Daily Caffeine</span>
     </a>
     <nav aria-label="Primary navigation">
-      <a href="#features">Features</a>
-      <a href="#release">Release</a>
-      <a href="https://github.com/michaelvd2/daily-caffeine/releases/latest">Download</a>
+      <a href="#workspace">Workspace Activity</a>
+      <a href="#controls">Controls</a>
+      <a href="#privacy">Privacy</a>
+      <a href="https://github.com/michaelvd2/daily-caffeine/releases/latest">Private release</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-preview" src="assets/daily-caffeine-preview.png" alt="Daily Caffeine menu showing active schedule status, add-for-today controls, and manual duration controls">
       <div class="hero-copy">
-        <h1>Schedule-based keep-awake control for macOS.</h1>
-        <p>Daily Caffeine keeps a Mac awake during working hours, supports temporary pauses, and lets you add time to today's schedule without changing the recurring limit.</p>
-        <div class="actions">
-          <a class="button primary" href="https://github.com/michaelvd2/daily-caffeine/releases/latest">Private release</a>
-          <a class="button secondary" href="#features">View features</a>
+        <p class="eyebrow">macOS menu bar utility</p>
+        <h1 id="hero-title">Daily Caffeine</h1>
+        <p class="hero-lede">Keep your Mac awake during working hours, pause it when you need to, and let active coding work extend the session quietly after the schedule ends.</p>
+        <div class="hero-actions" aria-label="Download links">
+          <a class="button primary" href="https://github.com/michaelvd2/daily-caffeine/releases/latest">Open private release</a>
+          <a class="button secondary" href="#workspace">See how it works</a>
         </div>
-      </div>
-      <div class="preview-frame" aria-label="Daily Caffeine menu preview">
-        <img src="assets/daily-caffeine-preview.png" alt="Daily Caffeine menu showing active schedule status and duration controls">
+        <p class="access-note">GitHub access is required for the private app release.</p>
       </div>
     </section>
 
-    <section id="features" class="feature-grid" aria-label="Daily Caffeine features">
-      <article>
-        <h2>Daily schedule</h2>
-        <p>Choose active days, start and end times, and an optional break window from the macOS settings panel.</p>
-      </article>
-      <article>
-        <h2>Add for today</h2>
-        <p>Add time to today's schedule end, useful when the recurring limit stays fixed but one day needs more time.</p>
-      </article>
-      <article>
-        <h2>Manual overrides</h2>
-        <p>Pause or keep awake for preset durations from 30 minutes through 8 hours, with remembered custom minutes inline.</p>
-      </article>
-    </section>
-
-    <section id="release" class="release">
+    <section class="status-strip" aria-label="Core behavior">
       <div>
-        <h2>Private macOS release</h2>
-        <p>The app is distributed as a zipped macOS app bundle from GitHub Releases. The repository and release are private; access requires GitHub permissions.</p>
+        <span class="label">Schedule</span>
+        <strong>09:00-18:00</strong>
+        <p>Set active weekdays, start and end times, and an optional break.</p>
       </div>
-      <ul>
-        <li>SwiftPM macOS 14 app</li>
-        <li>Menu-bar-only workflow</li>
-        <li>Ad hoc signed development build</li>
-      </ul>
+      <div>
+        <span class="label">Add for today</span>
+        <strong>End + 1h</strong>
+        <p>Extend today from the schedule end without changing tomorrow.</p>
+      </div>
+      <div>
+        <span class="label">Workspace</span>
+        <strong>Silent refresh</strong>
+        <p>Codex or Claude work can keep the Mac awake after hours.</p>
+      </div>
+    </section>
+
+    <section id="workspace" class="split-section">
+      <div class="section-heading">
+        <p class="eyebrow">Workspace Activity</p>
+        <h2>Stays awake when the work is actually moving.</h2>
+      </div>
+      <div class="section-body">
+        <p>Daily Caffeine can watch folders you choose and selected coding apps, such as Codex or Claude. When the selected app is active and files change inside a selected workspace, the app keeps the Mac awake for the configured grace window.</p>
+        <p>If activity continues, it extends silently. You get a clear start notification with the trigger and workspace, but not a new notification every refresh.</p>
+      </div>
+    </section>
+
+    <section id="controls" class="feature-list" aria-label="Daily Caffeine controls">
+      <article>
+        <span class="feature-kicker">01</span>
+        <h3>Daily schedule</h3>
+        <p>Run on selected weekdays with a same-day start and end time. Breaks can pause the assertion during lunch or another fixed window.</p>
+      </article>
+      <article>
+        <span class="feature-kicker">02</span>
+        <h3>Manual pause wins</h3>
+        <p>A manual pause overrides schedule and workspace activity, so you can deliberately let the Mac sleep without fighting automation.</p>
+      </article>
+      <article>
+        <span class="feature-kicker">03</span>
+        <h3>Add time to today</h3>
+        <p>Add 30 minutes through 8 hours, or an inline custom value, to today&apos;s scheduled end. The recurring schedule stays unchanged.</p>
+      </article>
+      <article>
+        <span class="feature-kicker">04</span>
+        <h3>Transparent notifications</h3>
+        <p>Session notifications include what started the keep-awake state: schedule, manual override, or workspace activity with app and folder context.</p>
+      </article>
+    </section>
+
+    <section id="privacy" class="split-section privacy-section">
+      <div class="section-heading">
+        <p class="eyebrow">Private by design</p>
+        <h2>No account, no analytics, no remote service.</h2>
+      </div>
+      <div class="section-body">
+        <p>Daily Caffeine stores its settings locally and uses macOS power assertions to prevent idle sleep. Workspace Activity watches only folders the user selects.</p>
+        <p>The current build is a private GitHub release for testing. It is not presented here as a Mac App Store approved or notarized public release.</p>
+      </div>
+    </section>
+
+    <section class="release-panel" aria-labelledby="release-title">
+      <div>
+        <p class="eyebrow">Private release</p>
+        <h2 id="release-title">Download from GitHub Releases.</h2>
+      </div>
+      <div class="release-copy">
+        <p>The release is distributed as a zipped macOS app bundle. Access depends on GitHub permissions for the private app repository.</p>
+        <a class="button primary" href="https://github.com/michaelvd2/daily-caffeine/releases/latest">Open latest release</a>
+      </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <span>Daily Caffeine</span>
+    <span>macOS 14 or later</span>
+    <a href="https://github.com/michaelvd2/daily-caffeine-site">Page source</a>
+  </footer>
 </body>
 </html>
